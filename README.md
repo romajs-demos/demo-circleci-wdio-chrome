@@ -40,6 +40,7 @@ Time:		 🕙  6.05s
 
 ```
 docker-compose build
+npm install
 docker-compose up
 ```
 
