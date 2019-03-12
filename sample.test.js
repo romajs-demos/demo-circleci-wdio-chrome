@@ -1,18 +1,9 @@
-const { remote } = require('webdriverio');
+const assert = require('assert');
 
-(async () => {
-    const browser = await remote({
-        logLevel: 'error',
-        path: '/',
-        capabilities: {
-            browserName: 'firefox'
-        }
+describe('webdriver.io page', () => {
+    it('should have the right title', () => {
+        browser.url('https://webdriver.io');
+        const title = browser.getTitle();
+        assert.equal(title, 'WebdriverIO · Next-gen WebDriver test framework for Node.js');
     });
-
-    await browser.url('https://webdriver.io');
-
-    const title = await browser.getTitle();
-    console.log('Title was: ' + title);
-
-    await browser.deleteSession();
-})().catch((e) => console.error(e));
+});

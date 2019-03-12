@@ -9,10 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webdriverio": "^5.7.2",
     "@wdio/cli": "^5.7.2",
     "@wdio/local-runner": "^5.7.2",
     "@wdio/mocha-framework": "^5.7.2",
-    "@wdio/sync": "^5.7.2"
+    "@wdio/sync": "^5.7.2",
+    "chromedriver": "^2.46.0",
+    "wdio-chromedriver-service": "^5.0.1",
+    "webdriverio": "^5.7.2"
   }
 }
