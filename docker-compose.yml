@@ -1,0 +1,14 @@
+version: '3'
+services:
+  test:
+    build: .
+    command: npm run test
+    # command: google-chrome-stable --version
+    # command: ls -alF /app/node_modules/chromedriver/lib/chromedriver/chromedriver
+    # command: echo $PATH
+    # command: ls -alF /usr/bin/chromedriver
+    # command: /usr/bin/chromedriver --version
+    # command: /app/node_modules/chromedriver/lib/chromedriver/chromedriver --version
+    # volumes:
+    #   - .:/app
+    working_dir: /app

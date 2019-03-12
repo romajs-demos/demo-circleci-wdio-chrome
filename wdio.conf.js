@@ -4,7 +4,7 @@ exports.config = {
     port: 9515,
     path: '/',
     services: ['chromedriver'],
-    chromeDriverArgs: ['--silent'],
+    chromeDriverArgs: ['--silent', '--no-sandbox'],
     
     //
     // ====================
@@ -64,6 +64,14 @@ exports.config = {
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
+        chromeOptions: {
+            // binary: '/usr/bin/chromium-browser',
+            args: [
+                'headless',
+                'disable-gpu',
+                'no-sandbox',
+            ],
+        },
     }],
     //
     // ===================
