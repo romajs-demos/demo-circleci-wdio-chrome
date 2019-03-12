@@ -1,7 +1,8 @@
 version: '3'
 services:
   test:
-    build: .circleci
+    # build: .circleci
+    image: timbru31/node-chrome
     command: npm run test
     volumes:
       - .:/app
